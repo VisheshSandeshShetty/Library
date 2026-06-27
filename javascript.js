@@ -24,3 +24,18 @@ console.log("Books in Library: ");
 myLibrary.forEach(function(book){
     console.log(book.title);
 })
+
+const LibraryDiv=document.getElementById("library");
+function displayBooks(){
+    LibraryDiv.innerHTML="";
+    myLibrary.forEach(function(book){
+        LibraryDiv.innerHTML+=`
+        <div class="book-card">
+        <h2>${book.title}</h2>
+        <p><strong>Author: </strong>${book.author}</p>
+        <p><strong>Pages: </strong>${book.pages}</p>
+        <p><strong>Status: </strong>${book.read}</p>
+        ----------------------------------------<br>`;
+    })
+}
+displayBooks();
