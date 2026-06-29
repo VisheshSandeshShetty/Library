@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    <h1 style="color: red;"><u>My Library</u></h1>
-    <div id="library">
-
+    <div class="top-section">
+        <h1 style="color: red;"><u>My Library</u></h1> 
+        <button id="new-book-btn">Add New Book</button>
+            <dialog id="new-book-dialog">
+                <form id="book-form">
+                    <label>Title</label>
+                    <input type="text" id="title" required>
+                    <label>Author</label>
+                    <input type="text" id="author" required>
+                    <label>Pages</label>
+                    <input type="number" id="pages" required>
+                    <select id="read">
+                        <option value="read">Read</option>
+                        <option value="unread">Unread</option>
+                    </select>
+                    <button type="submit">Add Book</button>
+                    <button type="button" id="close-dialog">Cancel</button>
+                </form>
+            </dialog>
     </div>
+    <div id="library"></div>
 </body>
 </html>
